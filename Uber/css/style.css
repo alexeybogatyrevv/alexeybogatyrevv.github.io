@@ -118,6 +118,9 @@ h6 {
 }
 
 .menu {
+  position: fixed;
+  width: 100%;
+  z-index: 4;
   background: #212121;
   height: 50px;
 }
@@ -127,10 +130,39 @@ h6 {
 }
 
 .menu__content {
+  z-index: 3;
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.menu__burger {
+  display: none;
+}
+
+.menu__burger span {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  margin: 0 0 3px 0;
+  transition: all 0.5s;
+}
+
+.menu__burger_active span {
+  margin: 0 0 -2px 0;
+}
+
+.menu__burger_active span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+.menu__burger_active span:nth-child(2) {
+  display: none;
+}
+
+.menu__burger_active span:nth-child(3) {
+  transform: rotate(45deg);
 }
 
 .menu__item {
@@ -152,6 +184,7 @@ h6 {
 
 .submenu {
   position: absolute;
+  top: 50px;
   width: 100%;
   z-index: 1;
   padding: 17px 0 10px 0;
@@ -225,7 +258,7 @@ h6 {
 .promo {
   position: relative;
   width: 100%;
-  top: 0;
+  top: 50px;
   padding: 150px 0 183px 0;
   background: url("../img/Promo/uber_bg.jpg") center center/cover no-repeat;
   color: #FFFFFF;
@@ -271,7 +304,7 @@ h6 {
 }
 
 .reasons {
-  padding: 54px 0 64px 0;
+  padding: 104px 0 64px 0;
 }
 
 .reasons__header {
@@ -819,8 +852,40 @@ h6 {
     max-width: 576px;
   }
 
-  .menu__nav {
-    display: none;
+  .menu__content {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+
+  .menu__content_active {
+    left: 0;
+  }
+
+  .menu__burger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+  }
+
+  .menu__item {
+    padding: 0;
+    border: none;
+    margin: 0 0 20px 0;
+  }
+
+  .menu__link {
+    font-size: 20px;
   }
 
   .submenu {
@@ -895,7 +960,16 @@ h6 {
     height: 35px;
   }
 
+  .menu__item {
+    text-align: center;
+  }
+
+  .menu__link {
+    font-size: 16px;
+  }
+
   .submenu {
+    top: 35px;
     height: 60px;
   }
 
@@ -927,6 +1001,10 @@ h6 {
     font-size: 9px;
   }
 
+  .promo {
+    top: 35px;
+  }
+
   .promo__header {
     font-size: 36px;
   }
@@ -937,6 +1015,10 @@ h6 {
 
   .promo__text {
     font-size: 14px;
+  }
+
+  .reasons {
+    padding: 70px 0 64px 0;
   }
 
   .header {
@@ -986,8 +1068,24 @@ h6 {
     max-width: none;
   }
 
+  .menu__content {
+    width: 85%;
+  }
+
   .submenu__img {
     padding: 20px 0 0 0;
+  }
+
+  .promo {
+    padding: 150px 0 83px 0;
+  }
+
+  .promo__subheader {
+    margin: 0 0 120px 0;
+  }
+
+  .promo__text {
+    display: none;
   }
 
   .header {
