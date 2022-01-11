@@ -1194,6 +1194,10 @@ main {
     font-size: 20px;
   }
 
+  .about {
+    padding: 80px 0 50px 0;
+  }
+
   .catalog-hyundai {
     padding: 80px 0 30px 0;
   }
