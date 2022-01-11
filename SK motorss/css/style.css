@@ -1198,12 +1198,24 @@ main {
     padding: 80px 0 30px 0;
   }
 
+  .catalog-hyundai__title {
+    font-size: 14px;
+  }
+
   .catalog-kia {
     padding: 80px 0 30px 0;
   }
 
+  .catalog-kia__title {
+    font-size: 14px;
+  }
+
   .catalog-genesis {
     padding: 80px 0 30px 0;
+  }
+
+  .catalog-genesis__title {
+    font-size: 14px;
   }
 }
 
@@ -1347,23 +1359,11 @@ main {
     font-size: 12px;
   }
 
-  .catalog-hyundai__title {
-    font-size: 14px;
-  }
-
   .catalog-kia__descr {
     font-size: 12px;
   }
 
-  .catalog-kia__title {
-    font-size: 14px;
-  }
-
   .catalog-genesis__descr {
     font-size: 12px;
-  }
-
-  .catalog-genesis__title {
-    font-size: 14px;
   }
 }
