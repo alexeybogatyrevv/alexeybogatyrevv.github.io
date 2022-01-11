@@ -449,12 +449,12 @@ main {
   text-decoration: underline;
 }
 
-.catalog-hyundai {
+.catalog {
   padding: 130px 0 30px 0;
   background-color: #000;
 }
 
-.catalog-hyundai__row {
+.catalog__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,11 +467,11 @@ main {
           align-items: center;
 }
 
-.catalog-hyundai__content {
+.catalog__content {
   /** color: #fff **/
 }
 
-.catalog-hyundai__text {
+.catalog__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,7 +484,7 @@ main {
           align-items: center;
 }
 
-.catalog-hyundai__header {
+.catalog__header {
   margin: 0 0 30px 0;
   font-size: 36px;
   color: #fff;
@@ -492,7 +492,7 @@ main {
   text-transform: uppercase;
 }
 
-.catalog-hyundai__descr {
+.catalog__descr {
   margin: 0 0 50px 0;
   font-size: 22px;
   line-height: 24px;
@@ -501,7 +501,7 @@ main {
   text-transform: uppercase;
 }
 
-.catalog-hyundai__brands {
+.catalog__brands {
   margin: 0 auto 50px auto;
   max-width: 1140px;
   display: -webkit-box;
@@ -512,7 +512,7 @@ main {
           justify-content: space-between;
 }
 
-.catalog-hyundai__hyundai {
+.catalog__hyundai {
   width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -526,18 +526,18 @@ main {
           justify-content: space-between;
 }
 
-.catalog-hyundai__hyundai img {
+.catalog__hyundai img {
   margin: 0 0 10px 0;
   max-width: 100%;
 }
 
-.catalog-hyundai__hyundai p {
+.catalog__hyundai p {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
 
-.catalog-hyundai__kia {
+.catalog__kia {
   width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,18 +551,18 @@ main {
           justify-content: space-between;
 }
 
-.catalog-hyundai__kia img {
+.catalog__kia img {
   margin: 0 0 10px 0;
   max-width: 100%;
 }
 
-.catalog-hyundai__kia p {
+.catalog__kia p {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
 
-.catalog-hyundai__genesis {
+.catalog__genesis {
   width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -576,39 +576,39 @@ main {
           justify-content: space-between;
 }
 
-.catalog-hyundai__genesis img {
+.catalog__genesis img {
   margin: 30px 0 10px 0;
   max-width: 100%;
 }
 
-.catalog-hyundai__genesis p {
+.catalog__genesis p {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
 
-.catalog-hyundai__slider {
+.catalog__slider {
   position: relative;
   padding: 0 50px;
 }
 
-.catalog-hyundai__item img {
+.catalog__item img {
   max-width: 90%;
 }
 
-.catalog-hyundai__title {
+.catalog__title {
   margin: 0 0 30px 0;
   color: #fff;
   font-size: 24px;
   text-transform: uppercase;
 }
 
-.catalog-hyundai .slick-slide img {
+.catalog .slick-slide img {
   display: block;
   margin: 0 auto;
 }
 
-.catalog-hyundai .slick-arrow {
+.catalog .slick-arrow {
   position: absolute;
   top: 50%;
   z-index: 1;
@@ -617,368 +617,12 @@ main {
   height: 14px;
 }
 
-.catalog-hyundai .slick-arrow.slick-prev {
+.catalog .slick-arrow.slick-prev {
   left: 0;
   background: url("../img/catalog/left.svg") 0 0/100% no-repeat;
 }
 
-.catalog-hyundai .slick-arrow.slick-next {
-  right: 0;
-  background: url("../img/catalog/right.svg") 0 0/100% no-repeat;
-}
-
-.catalog-kia {
-  padding: 130px 0 30px 0;
-  background-color: #000;
-}
-
-.catalog-kia__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.catalog-kia__content {
-  /** color: #fff **/
-}
-
-.catalog-kia__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.catalog-kia__header {
-  margin: 0 0 30px 0;
-  font-size: 36px;
-  color: #fff;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.catalog-kia__descr {
-  margin: 0 0 50px 0;
-  font-size: 22px;
-  line-height: 24px;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-kia__brands {
-  margin: 0 auto 50px auto;
-  max-width: 1140px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-kia__hyundai {
-  width: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-kia__hyundai img {
-  margin: 0 0 10px 0;
-  max-width: 100%;
-}
-
-.catalog-kia__hyundai p {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-kia__kia {
-  width: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-kia__kia img {
-  margin: 0 0 10px 0;
-  max-width: 100%;
-}
-
-.catalog-kia__kia p {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-kia__genesis {
-  width: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-kia__genesis img {
-  margin: 30px 0 10px 0;
-  max-width: 100%;
-}
-
-.catalog-kia__genesis p {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-kia__slider {
-  position: relative;
-  padding: 0 50px;
-}
-
-.catalog-kia__item img {
-  max-width: 90%;
-}
-
-.catalog-kia__title {
-  margin: 0 0 30px 0;
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.catalog-kia .slick-slide img {
-  display: block;
-  margin: 0 auto;
-}
-
-.catalog-kia .slick-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  font-size: 0;
-  width: 8px;
-  height: 14px;
-}
-
-.catalog-kia .slick-arrow.slick-prev {
-  left: 0;
-  background: url("../img/catalog/left.svg") 0 0/100% no-repeat;
-}
-
-.catalog-kia .slick-arrow.slick-next {
-  right: 0;
-  background: url("../img/catalog/right.svg") 0 0/100% no-repeat;
-}
-
-.catalog-genesis {
-  padding: 130px 0 30px 0;
-  background-color: #000;
-}
-
-.catalog-genesis__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.catalog-genesis__content {
-  /** color: #fff **/
-}
-
-.catalog-genesis__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.catalog-genesis__header {
-  margin: 0 0 30px 0;
-  font-size: 36px;
-  color: #fff;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.catalog-genesis__descr {
-  margin: 0 0 50px 0;
-  font-size: 22px;
-  line-height: 24px;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-genesis__brands {
-  margin: 0 auto 50px auto;
-  max-width: 1140px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-genesis__hyundai {
-  width: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-genesis__hyundai img {
-  margin: 0 0 10px 0;
-  max-width: 100%;
-}
-
-.catalog-genesis__hyundai p {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-genesis__kia {
-  width: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-genesis__kia img {
-  margin: 0 0 10px 0;
-  max-width: 100%;
-}
-
-.catalog-genesis__kia p {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-genesis__genesis {
-  width: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-genesis__genesis img {
-  margin: 30px 0 10px 0;
-  max-width: 100%;
-}
-
-.catalog-genesis__genesis p {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.catalog-genesis__slider {
-  position: relative;
-  padding: 0 50px;
-}
-
-.catalog-genesis__item img {
-  max-width: 90%;
-}
-
-.catalog-genesis__title {
-  margin: 0 0 30px 0;
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.catalog-genesis .slick-slide img {
-  display: block;
-  margin: 0 auto;
-}
-
-.catalog-genesis .slick-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  font-size: 0;
-  width: 8px;
-  height: 14px;
-}
-
-.catalog-genesis .slick-arrow.slick-prev {
-  left: 0;
-  background: url("../img/catalog/left.svg") 0 0/100% no-repeat;
-}
-
-.catalog-genesis .slick-arrow.slick-next {
+.catalog .slick-arrow.slick-next {
   right: 0;
   background: url("../img/catalog/right.svg") 0 0/100% no-repeat;
 }
@@ -1195,30 +839,18 @@ main {
   }
 
   .about {
-    padding: 80px 0 50px 0;
-  }
-
-  .catalog-hyundai {
     padding: 80px 0 30px 0;
   }
 
-  .catalog-hyundai__title {
-    font-size: 14px;
+  .about__text p {
+    margin: 0 0 30px 0;
   }
 
-  .catalog-kia {
+  .catalog {
     padding: 80px 0 30px 0;
   }
 
-  .catalog-kia__title {
-    font-size: 14px;
-  }
-
-  .catalog-genesis {
-    padding: 80px 0 30px 0;
-  }
-
-  .catalog-genesis__title {
+  .catalog__title {
     font-size: 14px;
   }
 }
@@ -1248,79 +880,27 @@ main {
     font-size: 12px;
   }
 
-  .about__text p {
-    margin: 0 0 70px 0;
-  }
-
-  .catalog-hyundai__header {
+  .catalog__header {
     font-size: 22px;
   }
 
-  .catalog-hyundai__descr {
+  .catalog__descr {
     font-size: 14px;
   }
 
-  .catalog-hyundai__hyundai {
+  .catalog__hyundai {
     width: 100px;
   }
 
-  .catalog-hyundai__kia {
+  .catalog__kia {
     width: 100px;
   }
 
-  .catalog-hyundai__genesis {
+  .catalog__genesis {
     width: 100px;
   }
 
-  .catalog-hyundai__genesis img {
-    margin: 20px 0 10px 0;
-  }
-
-  .catalog-kia__header {
-    font-size: 22px;
-  }
-
-  .catalog-kia__descr {
-    font-size: 14px;
-  }
-
-  .catalog-kia__hyundai {
-    width: 100px;
-  }
-
-  .catalog-kia__kia {
-    width: 100px;
-  }
-
-  .catalog-kia__genesis {
-    width: 100px;
-  }
-
-  .catalog-kia__genesis img {
-    margin: 20px 0 10px 0;
-  }
-
-  .catalog-genesis__header {
-    font-size: 22px;
-  }
-
-  .catalog-genesis__descr {
-    font-size: 14px;
-  }
-
-  .catalog-genesis__hyundai {
-    width: 100px;
-  }
-
-  .catalog-genesis__kia {
-    width: 100px;
-  }
-
-  .catalog-genesis__genesis {
-    width: 100px;
-  }
-
-  .catalog-genesis__genesis img {
+  .catalog__genesis img {
     margin: 20px 0 10px 0;
   }
 }
@@ -1355,19 +935,7 @@ main {
     line-height: 16px;
   }
 
-  .about__text p {
-    margin: 0 0 50px 0;
-  }
-
-  .catalog-hyundai__descr {
-    font-size: 12px;
-  }
-
-  .catalog-kia__descr {
-    font-size: 12px;
-  }
-
-  .catalog-genesis__descr {
+  .catalog__descr {
     font-size: 12px;
   }
 }
