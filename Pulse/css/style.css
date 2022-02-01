@@ -1223,10 +1223,8 @@ h6 {
     text-align: center;
   }
 
-  .form__row {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .form {
+    margin: 0 auto;
   }
 
   .catalog__tabs {
