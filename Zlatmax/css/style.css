@@ -216,14 +216,14 @@ body {
     padding-left: calc(0.625rem + 2.625 * (100vw - 20rem) / 81.25);
   }
 }
-@supports (font-size: clamp( 1rem , 0.9384615385rem  +  0.3076923077vw , 1.25rem )) {
+@supports (font-size: clamp( 0.75rem , 0.6269230769rem  +  0.6153846154vw , 1.25rem )) {
   .button {
-    font-size: clamp( 1rem , 0.9384615385rem  +  0.3076923077vw , 1.25rem );
+    font-size: clamp( 0.75rem , 0.6269230769rem  +  0.6153846154vw , 1.25rem );
   }
 }
-@supports not (font-size: clamp( 1rem , 0.9384615385rem  +  0.3076923077vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.6269230769rem  +  0.6153846154vw , 1.25rem )) {
   .button {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 81.25);
+    font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 81.25);
   }
 }
 @media (any-hover: hover) {
@@ -242,6 +242,10 @@ body {
   color: #fff;
   box-shadow: none;
   padding: 0.5rem 1.875rem;
+}
+.button:disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .checkbox {
@@ -1888,6 +1892,7 @@ body::after {
   font-size: 0.875rem;
   line-height: 1.4285714286;
   color: #141414;
+  white-space: nowrap;
 }
 .cart-content .fullprice {
   font-weight: 700;
@@ -1906,6 +1911,12 @@ body::after {
   align-items: center;
   padding: 0.625rem 1.25rem;
   background-color: #fff;
+  transition: background-color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .cart-product:hover {
+    background-color: #e8aa31;
+  }
 }
 .cart-product__img {
   max-width: 6.25rem;

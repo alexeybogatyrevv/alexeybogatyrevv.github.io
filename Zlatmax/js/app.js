@@ -10793,6 +10793,55 @@
                 e.preventDefault();
             }
         }
+        const productsBtn = document.querySelectorAll(".product-card__cart, .actions-product__cart");
+        const cartProductsList = document.querySelector(".cart-content__list");
+        const cart = document.querySelector(".cart");
+        const cartQuantity = cart.querySelector(".cart__quantity");
+        const fullPrice = document.querySelector(".fullprice");
+        let price = 0;
+        const randomId = () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        const priceWithoutSpaces = str => str.replace(/\s/g, "");
+        const normalPrice = str => String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+        const plusFullPrice = currentPrice => price += currentPrice;
+        const minusFullPrice = currentPrice => price -= currentPrice;
+        const printQuantity = () => {
+            let productsListLength = cartProductsList.querySelector(".simplebar-content").children.length;
+            cartQuantity.textContent = productsListLength;
+            productsListLength > 0 ? cart.classList.add("active") : cart.classList.remove("active");
+        };
+        const printFullPrice = () => {
+            fullPrice.textContent = `${normalPrice(price)} ₽`;
+        };
+        const generateCartProduct = (img, title, price, id) => `\n\t\t<li class="cart-content__item">\n\t\t\t<article class="cart-content__product cart-product" data-id="${id}">\n\t\t\t\t<img src="${img}" alt="" class="cart-product__img">\n\t\t\t\t<div class="cart-product__text">\n\t\t\t\t\t<h3 class="cart-product__title">${title}</h3>\n\t\t\t\t\t<span class="cart-product__price">${normalPrice(price)}</span>\n\t\t\t\t</div>\n\t\t\t\t<button class="cart-product__delete" aria-label="Удалить товар"></button>\n\t\t\t</article>\n\t\t</li>\n\t`;
+        const deleteProducts = productParent => {
+            let id = productParent.querySelector(".cart-product").dataset.id;
+            document.querySelector(`.product-card, .product-cart[data-id="${id}"]`).querySelector(".product-card__cart, .actions-product__cart").disabled = false;
+            let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector(".cart-product__price").textContent));
+            minusFullPrice(currentPrice);
+            printFullPrice();
+            productParent.remove();
+            printQuantity();
+        };
+        productsBtn.forEach((el => {
+            el.closest(".product-card, .product-cart").setAttribute("data-id", randomId());
+            el.addEventListener("click", (e => {
+                let self = e.currentTarget;
+                let parent = self.closest(".product-card, .product-cart");
+                let id = parent.dataset.id;
+                let img = parent.querySelector(".product-card__item-image-ibg_contain img").getAttribute("src");
+                let title = parent.querySelector(".product-card__title").textContent;
+                let priceString = priceWithoutSpaces(parent.querySelector(".product-card__price").textContent);
+                let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector(".product-card__price").textContent));
+                plusFullPrice(priceNumber);
+                printFullPrice();
+                cartProductsList.querySelector(".simplebar-content").insertAdjacentHTML("afterbegin", generateCartProduct(img, title, priceString, id));
+                printQuantity();
+                self.disabled = true;
+            }));
+        }));
+        cartProductsList.addEventListener("click", (e => {
+            if (e.target.classList.contains("cart-product__delete")) deleteProducts(e.target.closest(".cart-content__item"));
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
