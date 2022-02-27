@@ -1853,9 +1853,9 @@ body::after {
   background-color: #fff;
   box-shadow: 0px 4px 4px rgba(135, 135, 135, 0.25);
   cursor: default;
-  /* opacity: 0;
+  opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease 0s; */
+  transition: all 0.3s ease 0s;
 }
 @supports (right: clamp( -3.75rem , -4.6730769231rem  +  4.6153846154vw , 0rem )) {
   .cart-content {
