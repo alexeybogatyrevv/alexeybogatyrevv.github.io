@@ -10812,7 +10812,7 @@
         const printFullPrice = () => {
             fullPrice.textContent = `${normalPrice(price)} ₽`;
         };
-        const generateCartProduct = (img, title, price, id) => `\n\t\t<li class="cart-content__item">\n\t\t\t<article class="cart-content__product cart-product" data-id="${id}">\n\t\t\t\t<img src="${img}" alt="" class="cart-product__img">\n\t\t\t\t<div class="cart-product__text">\n\t\t\t\t\t<h3 class="cart-product__title">${title}</h3>\n\t\t\t\t\t<span class="cart-product__price">${normalPrice(price)}</span>\n\t\t\t\t</div>\n\t\t\t\t<button class="cart-product__delete" aria-label="Удалить товар"></button>\n\t\t\t</article>\n\t\t</li>\n\t`;
+        const generateCartProduct = (img, title, price, id) => `\n        <li class="cart-content__item">\n            <article class="cart-content__product cart-product" data-id="${id}">\n                <img src="${img}" alt="" class="cart-product__img">\n                <div class="cart-product__text">\n                    <h3 class="cart-product__title">${title}</h3>\n                    <span class="cart-product__price">${normalPrice(price)}</span>\n                </div>\n                <button class="cart-product__delete" aria-label="Удалить товар"></button>\n            </article>\n        </li>\n    `;
         const deleteProducts = productParent => {
             let id = productParent.querySelector(".cart-product").dataset.id;
             document.querySelector(`.product-card, .product-cart[data-id="${id}"]`).querySelector(".product-card__cart, .actions-product__cart").disabled = false;
@@ -10828,10 +10828,10 @@
                 let self = e.currentTarget;
                 let parent = self.closest(".product-card, .product-cart");
                 let id = parent.dataset.id;
-                let img = parent.querySelector(".product-card__item-image-ibg_contain img").getAttribute("src");
-                let title = parent.querySelector(".product-card__title").textContent;
-                let priceString = priceWithoutSpaces(parent.querySelector(".product-card__price").textContent);
-                let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector(".product-card__price").textContent));
+                let img = parent.querySelector(".product-card__item-image-ibg_contain img, .img-product__slide-ibg img").getAttribute("src");
+                let title = parent.querySelector(".product-card__title, .header-product__title").textContent;
+                let priceString = priceWithoutSpaces(parent.querySelector(".product-card__price, .actions-product__price").textContent);
+                let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector(".product-card__price, .actions-product__price").textContent));
                 plusFullPrice(priceNumber);
                 printFullPrice();
                 cartProductsList.querySelector(".simplebar-content").insertAdjacentHTML("afterbegin", generateCartProduct(img, title, priceString, id));
