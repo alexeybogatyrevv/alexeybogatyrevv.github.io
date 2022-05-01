@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220301084955">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220501120500">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,10 +42,11 @@
 				<div class="body-header__container">
 					<a href="home.html" class="body-header__logo"></a>
 					<div data-da=".catalog-header__container, 479.98" class="body-header__search">
-						<form action="#" class="search-header">
-							<button type="submit" class="search-header__button _icon-search"></button>
-							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="search-header__input">
-						</form>
+						<!-- <form action="#" class="search-header">
+					<button type="submit" class="search-header__button _icon-search"></button>
+					<input id="search" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+						placeholder="Поиск" class="search-header__input">
+				</form> -->
 					</div>
 					<div class="body-header__actions actions-header">
 						<!-- <a href="" class="actions-header__location _icon-location"><span>Москва</span></a> -->
@@ -61,32 +62,24 @@
 									</ul>
 								</div>
 							</div>
-							<button type="button" data-popup="#callback" class="phones-header__callback">Заказать
-								звонок</button>
+							<!-- <button type="button" data-popup="#callback" class="phones-header__callback">Заказать
+						звонок</button> -->
 						</div>
-						<a href="" data-da=".top-header__container, 991.98, 2" class="actions-header__favorite  _icon-favorite"></a>
+						<!-- <a href="" data-da=".top-header__container, 991.98, 2"
+					class="actions-header__favorite  _icon-favorite"></a> -->
 						<div data-da=".top-header__container, 991.98, 2" class="actions-header__cart cart-header">
 							<div class="cart-header__icon _icon-cart cart" tabindex="0">
 								<span class="cart__quantity">0</span>
 								<div class="cart-content">
 									<ul class="cart-content__list" data-simplebar>
-										<!-- <li class="cart-content__item">
-									<article class="cart-content__product cart-product">
-										<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="picture" class="cart-product__img"></picture>
-										<div class="cart-product__text">
-											<h3 class="cart-product__title">Нож Лиса</h3>
-											<span class="cart-product__price">2719 ₽</span>
-										</div>
-										<button class="cart-product__delete" aria-label="Удалить товар"></button>
-									</article>
-								</li> -->
+
 									</ul>
 									<div class="cart-content__botoom">
 										<div class="cart-content__fullprice">
 											<span>Итого:</span>
 											<span class="fullprice">2719 ₽</span>
 										</div>
-										<div class="cart-content__btn button">Перейти в корзину</div>
+										<button class="cart-content__btn button" data-graph-path="modal" data-graph-animation="fadeInUp">Перейти в корзину</button>
 									</div>
 								</div>
 							</div>
@@ -102,9 +95,9 @@
 						<ul class="menu-catalog__list">
 							<li class="menu-catalog__item"><button data-parent="1" class="menu-catalog__link">Каталог
 									ножей</button></li>
-							<li class="menu-catalog__item"><button data-parent="2" class="menu-catalog__link">Клинковое
-									оружие</button></li>
-							<li class="menu-catalog__item"><a href="product.html" class="menu-catalog__link">Сувенирные
+							<!-- <li class="menu-catalog__item"><button data-parent="2" class="menu-catalog__link">Клинковое
+							оружие</button></li> -->
+							<li class="menu-catalog__item"><a href="knifeDiana.html" class="menu-catalog__link">Сувенирные
 									изделия</a></li>
 							<li class="menu-catalog__item"><a href="catalog-flashlight.html" class="menu-catalog__link">Фонари
 									ARMYTEK</a></li>
@@ -119,18 +112,18 @@
 										<a href="catalog.html" class="sub-menu-catalog__link-category">Категория ножей</a>
 									</div>
 									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Производство ножей</a>
+										<a href="catalog.html" class="sub-menu-catalog__link-category">Ножи по наименованиям</a>
 									</div>
-									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Ножи по маркам стали</a>
-									</div>
-									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Заточка и полировка
-											ножей</a>
-									</div>
-									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Ножевая мастерская</a>
-									</div>
+									<!-- <div class="sub-menu-catalog__category">
+								<a href="catalog.html" class="sub-menu-catalog__link-category">Ножи по маркам стали</a>
+							</div> -->
+									<!-- <div class="sub-menu-catalog__category">
+								<a href="catalog.html" class="sub-menu-catalog__link-category">Заточка и полировка
+									ножей</a>
+							</div>
+							<div class="sub-menu-catalog__category">
+								<a href="catalog.html" class="sub-menu-catalog__link-category">Ножевая мастерская</a>
+							</div> -->
 
 									<ul class="sub-menu-catalog__list">
 										<li class="sub-menu-catalog__item">
@@ -163,114 +156,119 @@
 									</ul>
 									<ul class="sub-menu-catalog__list">
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи АИР</a>
+											<a href="knifeFox.html" class="sub-menu-catalog__link">Нож Лиса</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи ЗИК</a>
+											<a href="knifeBekas.html" class="sub-menu-catalog__link">Нож Бекас</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи ЗЗОСС</a>
+											<a href="knifeSayga.html" class="sub-menu-catalog__link">Нож Сайга</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи РОСоружие</a>
+											<a href="knifeMalysh.html" class="sub-menu-catalog__link">Мачете Малыш</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи Оружейник</a>
+											<a href="knifeMetatelnyBoec.html" class="sub-menu-catalog__link">Нож Метательный
+												Боец 1
+											</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Булат Сергея Баранова</a>
+											<a href="knifeDiana.html" class="sub-menu-catalog__link">Эксклюзивный нож Диана</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Булат Андрея Умерова</a>
+											<a href="axeGift.html" class="sub-menu-catalog__link">Топор украшенный
+											</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи Златко</a>
+											<a href="knifeSigara.html" class="sub-menu-catalog__link">Нож «Сигара COHIBA»
+											</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи Стиль-М</a>
+											<a href="knifeBobrik.html" class="sub-menu-catalog__link">Нож Бобрик</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Оружейная компания</a>
+											<a href="knifeFigther.html" class="sub-menu-catalog__link">Нож Боец разборный
+											</a>
 										</li>
 									</ul>
-									<ul class="sub-menu-catalog__list">
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 40х102С2М</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 95х18</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 100х13м</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 110х18м-ШД</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 50х14МФ</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали AUS-8</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали К340</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали M390</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭП-766</a>
-										</li>
-									</ul>
-									<ul class="sub-menu-catalog__list">
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Паста ГОИ</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Алмазная паста</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Бруски и камни для заточки</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Заточные системы</a>
-										</li>
-									</ul>
-									<ul class="sub-menu-catalog__list">
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножевые клинки</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Заготовки для ножей</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Литье для ножей</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Материалы для рукоятей</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Уход за рукоятиями ножей</a>
-										</li>
-									</ul>
+									<!-- <ul class="sub-menu-catalog__list">
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 40х102С2М</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 95х18</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 100х13м</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 110х18м-ШД</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 50х14МФ</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали AUS-8</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали К340</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали M390</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭП-766</a>
+								</li>
+							</ul> -->
+									<!-- <ul class="sub-menu-catalog__list">
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Паста ГОИ</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Алмазная паста</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Бруски и камни для заточки</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Заточные системы</a>
+								</li>
+							</ul> -->
+									<!-- <ul class="sub-menu-catalog__list">
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножевые клинки</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Заготовки для ножей</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Литье для ножей</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Материалы для рукоятей</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Уход за рукоятиями ножей</a>
+								</li>
+							</ul> -->
 									<div class="sub-menu-catalog__footer">
 										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
 									</div>
 									<div class="sub-menu-catalog__footer">
 										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
 									</div>
-									<div class="sub-menu-catalog__footer">
-										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
-									</div>
-									<div class="sub-menu-catalog__footer">
-										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
-									</div>
-									<div class="sub-menu-catalog__footer">
-										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
-									</div>
+									<!-- <div class="sub-menu-catalog__footer">
+								<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
+							</div>
+							<div class="sub-menu-catalog__footer">
+								<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
+							</div>
+							<div class="sub-menu-catalog__footer">
+								<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
+							</div> -->
 								</div>
 								<div hidden data-submenu="2" class="sub-menu-catalog__block">
 									<div class="sub-menu-catalog__category">
@@ -379,7 +377,7 @@
 										<article class="product-card">
 											<a href="card-certificate.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/certificate/certificate.webp" type="image/webp"><img src="img/certificate/certificate.jpg" alt="Picture"></picture>
+													<img src="img/certificate/certificate5000.jpg" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
@@ -421,7 +419,7 @@
 										<article class="product-card">
 											<a href="card-certificate.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/certificate/certificate.webp" type="image/webp"><img src="img/certificate/certificate.jpg" alt="Picture"></picture>
+													<img src="img/certificate/certificate10k.jpg" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
@@ -432,7 +430,7 @@
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">На сумму</div>
-													<div class="info-product-card__materials">5000 р.</div>
+													<div class="info-product-card__materials">10000 р.</div>
 												</div>
 												<div class="product-card__rating rating rating_set">
 													<div class="rating__body">
@@ -449,7 +447,7 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">5000 р.</div>
+													<div class="product-card__price">10000 р.</div>
 													<a href="" class="product-card__compare _icon-compare"></a>
 													<a href="" class="product-card__favorite _icon-favorite"></a>
 												</div>
@@ -463,7 +461,7 @@
 										<article class="product-card">
 											<a href="card-certificate.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/certificate/certificate.webp" type="image/webp"><img src="img/certificate/certificate.jpg" alt="Picture"></picture>
+													<img src="img/certificate/certificate15k.jpg" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
@@ -474,7 +472,7 @@
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">На сумму</div>
-													<div class="info-product-card__materials">5000 р.</div>
+													<div class="info-product-card__materials">15000 р.</div>
 												</div>
 												<div class="product-card__rating rating rating_set">
 													<div class="rating__body">
@@ -491,7 +489,7 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">5000 р.</div>
+													<div class="product-card__price">15000 р.</div>
 													<a href="" class="product-card__compare _icon-compare"></a>
 													<a href="" class="product-card__favorite _icon-favorite"></a>
 												</div>
@@ -505,7 +503,7 @@
 										<article class="product-card">
 											<a href="card-certificate.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/certificate/certificate.webp" type="image/webp"><img src="img/certificate/certificate.jpg" alt="Picture"></picture>
+													<img src="img/certificate/certificate20k.jpg" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
@@ -516,7 +514,7 @@
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">На сумму</div>
-													<div class="info-product-card__materials">5000 р.</div>
+													<div class="info-product-card__materials">20000 р.</div>
 												</div>
 												<div class="product-card__rating rating rating_set">
 													<div class="rating__body">
@@ -533,7 +531,7 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">5000 р.</div>
+													<div class="product-card__price">20000 р.</div>
 													<a href="" class="product-card__compare _icon-compare"></a>
 													<a href="" class="product-card__favorite _icon-favorite"></a>
 												</div>
@@ -547,7 +545,7 @@
 										<article class="product-card">
 											<a href="card-certificate.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/certificate/certificate.webp" type="image/webp"><img src="img/certificate/certificate.jpg" alt="Picture"></picture>
+													<img src="img/certificate/certificate25k.jpg" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
@@ -558,7 +556,7 @@
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">На сумму</div>
-													<div class="info-product-card__materials">5000 р.</div>
+													<div class="info-product-card__materials">25000 р.</div>
 												</div>
 												<div class="product-card__rating rating rating_set">
 													<div class="rating__body">
@@ -575,7 +573,7 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">5000 р.</div>
+													<div class="product-card__price">25000 р.</div>
 													<a href="" class="product-card__compare _icon-compare"></a>
 													<a href="" class="product-card__favorite _icon-favorite"></a>
 												</div>
@@ -594,6 +592,43 @@
 
 			</section>
 		</main>
+		<div class="modal">
+			<div class="modal__container order-modal" role="dialog" aria-modal="true" data-graph-target="modal">
+				<div class="modal-content order-modal__content">
+					<div class="order-modal__top">
+						<h2 class="order-modal__title">Оформления заказа</h2>
+						<span class="order-modal__number">Заказ №34</span>
+					</div>
+					<div class="order-modal__info">
+						<div class="order-modal__quantity order-modal__info-item">Товаров в заказе: <span>3 шт</span>
+						</div>
+						<div class="order-modal__summ order-modal__info-item">Общая сумма заказа: <span>10 000 ₽</span>
+						</div>
+						<div class="order-modal__products order-modal__info-item">
+							<button class="order-modal__btn">Состав заказа</button>
+							<ul class="order-modal__list">
+
+							</ul>
+						</div>
+					</div>
+					<form action="#" class="order-modal__form order">
+						<label class="order__label">
+							<span class="order__text">Ваше имя</span>
+							<input name="Имя" type="text" class="order__input">
+						</label>
+						<label class="order__label">
+							<span class="order__text">Номер телефона</span>
+							<input name="Телефон" type="tel" class="order__input" placeholder="+7 (___)___-__-__">
+						</label>
+						<label class="order__label">
+							<span class="order__text">Электронная почта</span>
+							<input name="Email" type="email" class="order__input" placeholder="post@gmail.com">
+						</label>
+						<button class="order__btn button">Оформить заказ</button>
+					</form>
+				</div>
+			</div>
+		</div>
 		<footer class="footer">
 			<section class="footer__text text-footer">
 				<div class="text-footer__container">
@@ -741,22 +776,22 @@
 										<ul class="social-footer">
 											<li class="social-footer__item">
 												<a href="https://ru-ru.facebook.com/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/facebook.webp" type="image/webp"><img src="img/icons/social/facebook.png" alt="picture"></picture>
+													<img src="img/icons/social/facebook.png" alt="picture">
 												</a>
 											</li>
 											<li class="social-footer__item">
 												<a href="https://www.viber.com/ru/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/viber.webp" type="image/webp"><img src="img/icons/social/viber.png" alt="picture"></picture>
+													<img src="img/icons/social/viber.png" alt="picture">
 												</a>
 											</li>
 											<li class="social-footer__item">
 												<a href="https://telegram.org/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/telegram.webp" type="image/webp"><img src="img/icons/social/telegram.png" alt="picture"></picture>
+													<img src="img/icons/social/telegram.png" alt="picture">
 												</a>
 											</li>
 											<li class="social-footer__item">
 												<a href="https://web.whatsapp.com/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/whatsapp.webp" type="image/webp"><img src="img/icons/social/whatsapp.png" alt="picture"></picture>
+													<img src="img/icons/social/whatsapp.png" alt="picture">
 												</a>
 											</li>
 										</ul>
@@ -847,15 +882,15 @@
 
 	<div id="form-message" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__content popup__content-email">
+				<!-- <button data-close type="button" class="popup__close">Закрыть</button> -->
 				<div class="popup__text">
 					Спасибо!
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220301084955"></script>
+	<script src="js/app.min.js?_v=20220501120500"></script>
 </body>
 
 </html>

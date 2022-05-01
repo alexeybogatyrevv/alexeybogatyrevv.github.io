@@ -2865,6 +2865,7 @@
                 if ("fixed" === elementCss.position) return null;
             }
             var currentNode = getParentNode(element);
+            if (isShadowRoot(currentNode)) currentNode = currentNode.host;
             while (isHTMLElement(currentNode) && [ "html", "body" ].indexOf(getNodeName(currentNode)) < 0) {
                 var css = getComputedStyle_getComputedStyle(currentNode);
                 if ("none" !== css.transform || "none" !== css.perspective || "paint" === css.contain || -1 !== [ "transform", "perspective" ].indexOf(css.willChange) || isFirefox && "filter" === css.willChange || isFirefox && css.filter && "none" !== css.filter) return currentNode; else currentNode = currentNode.parentNode;
@@ -3243,13 +3244,13 @@
                 offsetParent = offsetParent;
                 if (placement === enums_top || (placement === left || placement === right) && variation === end) {
                     sideY = bottom;
-                    var offsetY = isFixed && win.visualViewport ? win.visualViewport.height : offsetParent[heightProp];
+                    var offsetY = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.height : offsetParent[heightProp];
                     y -= offsetY - popperRect.height;
                     y *= gpuAcceleration ? 1 : -1;
                 }
                 if (placement === left || (placement === enums_top || placement === bottom) && variation === end) {
                     sideX = right;
-                    var offsetX = isFixed && win.visualViewport ? win.visualViewport.width : offsetParent[widthProp];
+                    var offsetX = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.width : offsetParent[widthProp];
                     x -= offsetX - popperRect.width;
                     x *= gpuAcceleration ? 1 : -1;
                 }
@@ -8105,7 +8106,7 @@
                 }
                 if ("bullets" === params.type && params.clickable) $el.addClass(params.clickableClass);
                 $el.addClass(params.modifierClass + params.type);
-                $el.addClass(params.modifierClass + swiper.params.direction);
+                $el.addClass(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
                 if ("bullets" === params.type && params.dynamicBullets) {
                     $el.addClass(`${params.modifierClass}${params.type}-dynamic`);
                     dynamicBulletIndex = 0;
@@ -8130,7 +8131,7 @@
                 const $el = swiper.pagination.$el;
                 $el.removeClass(params.hiddenClass);
                 $el.removeClass(params.modifierClass + params.type);
-                $el.removeClass(params.modifierClass + swiper.params.direction);
+                $el.removeClass(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
                 if (swiper.pagination.bullets && swiper.pagination.bullets.removeClass) swiper.pagination.bullets.removeClass(params.bulletActiveClass);
                 if (params.clickable) $el.off("click", classes_to_selector_classesToSelector(params.bulletClass));
             }
@@ -10793,54 +10794,286 @@
                 e.preventDefault();
             }
         }
-        const productsBtn = document.querySelectorAll(".product-card__cart, .actions-product__cart");
-        const cartProductsList = document.querySelector(".cart-content__list");
-        const cart = document.querySelector(".cart");
-        const cartQuantity = cart.querySelector(".cart__quantity");
-        const fullPrice = document.querySelector(".fullprice");
-        let price = 0;
-        const randomId = () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        const priceWithoutSpaces = str => str.replace(/\s/g, "");
-        const normalPrice = str => String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
-        const plusFullPrice = currentPrice => price += currentPrice;
-        const minusFullPrice = currentPrice => price -= currentPrice;
-        const printQuantity = () => {
-            let productsListLength = cartProductsList.querySelector(".simplebar-content").children.length;
-            cartQuantity.textContent = productsListLength;
-            productsListLength > 0 ? cart.classList.add("active") : cart.classList.remove("active");
-        };
-        const printFullPrice = () => {
-            fullPrice.textContent = `${normalPrice(price)} ₽`;
-        };
-        const generateCartProduct = (img, title, price, id) => `\n        <li class="cart-content__item">\n            <article class="cart-content__product cart-product" data-id="${id}">\n                <img src="${img}" alt="" class="cart-product__img">\n                <div class="cart-product__text">\n                    <h3 class="cart-product__title">${title}</h3>\n                    <span class="cart-product__price">${normalPrice(price)}</span>\n                </div>\n                <button class="cart-product__delete" aria-label="Удалить товар"></button>\n            </article>\n        </li>\n    `;
-        const deleteProducts = productParent => {
-            let id = productParent.querySelector(".cart-product").dataset.id;
-            document.querySelector(`.product-card, .product-cart[data-id="${id}"]`).querySelector(".product-card__cart, .actions-product__cart").disabled = false;
-            let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector(".cart-product__price").textContent));
-            minusFullPrice(currentPrice);
-            printFullPrice();
-            productParent.remove();
-            printQuantity();
-        };
-        productsBtn.forEach((el => {
-            el.closest(".product-card, .product-cart").setAttribute("data-id", randomId());
-            el.addEventListener("click", (e => {
-                let self = e.currentTarget;
-                let parent = self.closest(".product-card, .product-cart");
-                let id = parent.dataset.id;
-                let img = parent.querySelector(".product-card__item-image-ibg_contain img, .img-product__slide-ibg img").getAttribute("src");
-                let title = parent.querySelector(".product-card__title, .header-product__title").textContent;
-                let priceString = priceWithoutSpaces(parent.querySelector(".product-card__price, .actions-product__price").textContent);
-                let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector(".product-card__price, .actions-product__price").textContent));
-                plusFullPrice(priceNumber);
+        document.addEventListener("DOMContentLoaded", (() => {
+            const productsBtn = document.querySelectorAll(".product-card__cart, .actions-product__cart");
+            const cartProductsList = document.querySelector(".cart-content__list");
+            const cart = document.querySelector(".cart");
+            const cartQuantity = cart.querySelector(".cart__quantity");
+            const fullPrice = document.querySelector(".fullprice");
+            const orderModalOpenProd = document.querySelector(".order-modal__btn");
+            const orderModalList = document.querySelector(".order-modal__list");
+            let price = 0;
+            let randomId = 0;
+            let productArray = [];
+            const priceWithoutSpaces = str => str.replace(/\s/g, "");
+            const normalPrice = str => String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+            const plusFullPrice = currentPrice => price += currentPrice;
+            const minusFullPrice = currentPrice => price -= currentPrice;
+            const printQuantity = () => {
+                let productsListLength = cartProductsList.querySelector(".simplebar-content").children.length;
+                cartQuantity.textContent = productsListLength;
+                productsListLength > 0 ? cart.classList.add("active") : cart.classList.remove("active");
+            };
+            const printFullPrice = () => {
+                fullPrice.textContent = `${normalPrice(price)} ₽`;
+            };
+            const generateCartProduct = (img, title, price, id) => `\n\t\t<li class="cart-content__item">\n\t\t\t<article class="cart-content__product cart-product" data-id="${id}">\n\t\t\t\t<img src="${img}" alt="" class="cart-product__img">\n\t\t\t\t<div class="cart-product__text">\n\t\t\t\t\t<h3 class="cart-product__title">${title}</h3>\n\t\t\t\t\t<span class="cart-product__price">${normalPrice(price)}</span>\n\t\t\t\t</div>\n\t\t\t\t<button class="cart-product__delete" aria-label="Удалить товар"></button>\n\t\t\t</article>\n\t\t</li>\n\t`;
+            const deleteProducts = productParent => {
+                let id = productParent.querySelector(".cart-product").dataset.id;
+                document.querySelector(`.product-card, .product-cart[data-id="${id}"]`).querySelector(".product-card__cart, .actions-product__cart").disabled = false;
+                let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector(".cart-product__price").textContent));
+                minusFullPrice(currentPrice);
                 printFullPrice();
-                cartProductsList.querySelector(".simplebar-content").insertAdjacentHTML("afterbegin", generateCartProduct(img, title, priceString, id));
+                productParent.remove();
                 printQuantity();
-                self.disabled = true;
+                updateStorage();
+            };
+            productsBtn.forEach((el => {
+                el.closest(".product-card, .product-cart").setAttribute("data-id", randomId++);
+                el.addEventListener("click", (e => {
+                    let self = e.currentTarget;
+                    let parent = self.closest(".product-card, .product-cart");
+                    let id = parent.dataset.id;
+                    let img = parent.querySelector(".product-card__item-image-ibg_contain img, .img-product__slide-ibg img").getAttribute("src");
+                    let title = parent.querySelector(".product-card__title, .header-product__title").textContent;
+                    let priceString = priceWithoutSpaces(parent.querySelector(".product-card__price, .actions-product__price").textContent);
+                    let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector(".product-card__price, .actions-product__price").textContent));
+                    plusFullPrice(priceNumber);
+                    printFullPrice();
+                    cartProductsList.querySelector(".simplebar-content").insertAdjacentHTML("afterbegin", generateCartProduct(img, title, priceString, id));
+                    printQuantity();
+                    updateStorage();
+                    self.disabled = true;
+                }));
             }));
-        }));
-        cartProductsList.addEventListener("click", (e => {
-            if (e.target.classList.contains("cart-product__delete")) deleteProducts(e.target.closest(".cart-content__item"));
+            cartProductsList.addEventListener("click", (e => {
+                if (e.target.classList.contains("cart-product__delete")) deleteProducts(e.target.closest(".cart-content__item"));
+            }));
+            class GraphModal {
+                constructor(options) {
+                    let defaultOptions = {
+                        isOpen: () => {},
+                        isClose: () => {}
+                    };
+                    this.options = Object.assign(defaultOptions, options);
+                    this.modal = document.querySelector(".modal");
+                    this.speed = 300;
+                    this.animation = false;
+                    this.reOpen = false;
+                    this.nextWindow = false;
+                    this.modalContainer = false;
+                    this.isOpened = false;
+                    this.previousActiveElement = false;
+                    this._focusElements = [ "a[href]", "area[href]", 'input:not([disabled]):not([type="hidden"]):not([aria-hidden])', "select:not([disabled]):not([aria-hidden])", "textarea:not([disabled]):not([aria-hidden])", "button:not([disabled]):not([aria-hidden])", "iframe", "object", "embed", "[contenteditable]", '[tabindex]:not([tabindex^="-"])' ];
+                    this.fixBlocks = document.querySelectorAll(".fix-block");
+                    this.events();
+                }
+                events() {
+                    document.addEventListener("click", function(e) {
+                        const clickedElement = e.target.closest(`[data-graph-path]`);
+                        if (clickedElement) {
+                            let target = clickedElement.dataset.graphPath;
+                            let animation = clickedElement.dataset.graphAnimation;
+                            let speed = clickedElement.dataset.graphSpeed;
+                            this.animation = animation ? animation : "fade";
+                            this.speed = speed ? parseInt(speed) : 300;
+                            this.nextWindow = document.querySelector(`[data-graph-target="${target}"]`);
+                            this.open();
+                            return;
+                        }
+                        if (e.target.closest(".modal__close")) {
+                            this.close();
+                            return;
+                        }
+                    }.bind(this));
+                    window.addEventListener("keydown", function(e) {
+                        if (27 == e.keyCode) if (this.modalContainer.classList.contains("modal-open")) this.close();
+                        if (9 == e.which && this.isOpened) {
+                            this.focusCatch(e);
+                            return;
+                        }
+                    }.bind(this));
+                    this.modal.addEventListener("click", function(e) {
+                        if (!e.target.classList.contains("modal__container") && !e.target.closest(".modal__container") && this.isOpened) this.close();
+                    }.bind(this));
+                }
+                open(selector) {
+                    this.previousActiveElement = document.activeElement;
+                    if (this.isOpened) {
+                        this.reOpen = true;
+                        this.close();
+                        return;
+                    }
+                    this.modalContainer = this.nextWindow;
+                    if (selector) this.modalContainer = document.querySelector(`[data-graph-target="${selector}"]`);
+                    this.modal.style.setProperty("--transition-time", `${this.speed / 1e3}s`);
+                    this.modal.classList.add("is-open");
+                    this.disableScroll();
+                    this.modalContainer.classList.add("modal-open");
+                    this.modalContainer.classList.add(this.animation);
+                    setTimeout((() => {
+                        this.options.isOpen(this);
+                        this.modalContainer.classList.add("animate-open");
+                        this.isOpened = true;
+                        this.focusTrap();
+                    }), this.speed);
+                }
+                close() {
+                    if (this.modalContainer) {
+                        this.modalContainer.classList.remove("animate-open");
+                        this.modalContainer.classList.remove(this.animation);
+                        this.modal.classList.remove("is-open");
+                        this.modalContainer.classList.remove("modal-open");
+                        this.enableScroll();
+                        this.options.isClose(this);
+                        this.isOpened = false;
+                        this.focusTrap();
+                        if (this.reOpen) {
+                            this.reOpen = false;
+                            this.open();
+                        }
+                    }
+                }
+                focusCatch(e) {
+                    const nodes = this.modalContainer.querySelectorAll(this._focusElements);
+                    const nodesArray = Array.prototype.slice.call(nodes);
+                    const focusedItemIndex = nodesArray.indexOf(document.activeElement);
+                    if (e.shiftKey && 0 === focusedItemIndex) {
+                        nodesArray[nodesArray.length - 1].focus();
+                        e.preventDefault();
+                    }
+                    if (!e.shiftKey && focusedItemIndex === nodesArray.length - 1) {
+                        nodesArray[0].focus();
+                        e.preventDefault();
+                    }
+                }
+                focusTrap() {
+                    const nodes = this.modalContainer.querySelectorAll(this._focusElements);
+                    if (this.isOpened) {
+                        if (nodes.length) nodes[0].focus();
+                    } else this.previousActiveElement.focus();
+                }
+                disableScroll() {
+                    let pagePosition = window.scrollY;
+                    this.lockPadding();
+                    document.body.classList.add("disable-scroll");
+                    document.body.dataset.position = pagePosition;
+                    document.body.style.top = -pagePosition + "px";
+                }
+                enableScroll() {
+                    let pagePosition = parseInt(document.body.dataset.position, 10);
+                    this.unlockPadding();
+                    document.body.style.top = "auto";
+                    document.body.classList.remove("disable-scroll");
+                    window.scroll({
+                        top: pagePosition,
+                        left: 0
+                    });
+                    document.body.removeAttribute("data-position");
+                }
+                lockPadding() {
+                    let paddingOffset = window.innerWidth - document.body.offsetWidth + "px";
+                    this.fixBlocks.forEach((el => {
+                        el.style.paddingRight = paddingOffset;
+                    }));
+                    document.body.style.paddingRight = paddingOffset;
+                }
+                unlockPadding() {
+                    this.fixBlocks.forEach((el => {
+                        el.style.paddingRight = "0px";
+                    }));
+                    document.body.style.paddingRight = "0px";
+                }
+            }
+            let flag = 0;
+            orderModalOpenProd.addEventListener("click", (e => {
+                if (0 == flag) {
+                    orderModalOpenProd.classList.add("open");
+                    orderModalList.style.display = "block";
+                    flag = 1;
+                } else {
+                    orderModalOpenProd.classList.remove("open");
+                    orderModalList.style.display = "none";
+                    flag = 0;
+                }
+            }));
+            const generateModalProduct = (img, title, price, id) => `\n\t\t<li class="order-modal__item">\n\t\t\t<article class="order-modal__product order-product" data-id="${id}">\n\t\t\t\t<img src="${img}" alt="" class="order-product__img">\n\t\t\t\t<div class="order-product__text">\n\t\t\t\t\t<h3 class="order-product__title">${title}</h3>\n\t\t\t\t\t<span class="order-product__price">${normalPrice(price)}</span>\n\t\t\t\t</div>\n\t\t\t\t<button class="order-product__delete"></button>\n\t\t\t</article>\n\t\t</li>\n\t`;
+            new GraphModal({
+                isOpen: modal => {
+                    console.log("opened");
+                    let array = cartProductsList.querySelector(".simplebar-content").children;
+                    let fullprice = fullPrice.textContent;
+                    let length = array.length;
+                    document.querySelector(".order-modal__quantity span").textContent = `${length} шт`;
+                    document.querySelector(".order-modal__summ span").textContent = `${fullprice}`;
+                    for (const item of array) {
+                        console.log(item);
+                        let img = item.querySelector(".cart-product__img").getAttribute("src");
+                        let title = item.querySelector(".cart-product__title").textContent;
+                        let priceString = priceWithoutSpaces(item.querySelector(".cart-product__price").textContent);
+                        let id = item.querySelector(".cart-product").dataset.id;
+                        orderModalList.insertAdjacentHTML("afterbegin", generateModalProduct(img, title, priceString, id));
+                        let obj = {};
+                        obj.title = title;
+                        obj.price = priceString;
+                        productArray.push(obj);
+                    }
+                    console.log(productArray);
+                },
+                isClose: () => {
+                    console.log("closed");
+                }
+            });
+            document.querySelector(".order").addEventListener("submit", (e => {
+                e.preventDefault();
+                let self = e.currentTarget;
+                let formData = new FormData(self);
+                let name = self.querySelector('[name="Имя"]').value;
+                let tel = self.querySelector('[name="Телефон"]').value;
+                let mail = self.querySelector('[name="Email"]').value;
+                formData.append("Товары", JSON.stringify(productArray));
+                formData.append("Имя", name);
+                formData.append("Телефон", tel);
+                formData.append("Email", mail);
+                let xhr = new XMLHttpRequest;
+                xhr.onreadystatechange = function() {
+                    if (4 === xhr.readyState) if (200 === xhr.status) console.log("Отправлено");
+                };
+                xhr.open("POST", "mail.php", true);
+                xhr.send(formData);
+                self.reset();
+            }));
+            const countSumm = () => {
+                document.querySelectorAll(".cart-content__item").forEach((el => {
+                    price += parseInt(priceWithoutSpaces(el.querySelector(".cart-product__price").textContent));
+                }));
+            };
+            const initialState = () => {
+                if (null !== localStorage.getItem("products")) {
+                    cartProductsList.querySelector(".simplebar-content").innerHTML = localStorage.getItem("products");
+                    printQuantity();
+                    countSumm();
+                    printFullPrice();
+                }
+            };
+            initialState();
+            const updateStorage = () => {
+                let parent = cartProductsList.querySelector(".simplebar-content");
+                let html = parent.innerHTML;
+                html = html.trim();
+                console.log(html);
+                console.log(html.length);
+                if (html.length) localStorage.setItem("products", html); else localStorage.removeItem("products");
+            };
+            document.querySelector(".modal").addEventListener("click", (e => {
+                if (e.target.classList.contains("order-product__delete")) {
+                    let id = e.target.closest(".order-modal__product").dataset.id;
+                    let cartProduct = document.querySelector(`.cart-content__product[data-id="${id}"]`).closest(".cart-content__item");
+                    deleteProducts(cartProduct);
+                    e.target.closest(".order-modal__product").remove();
+                }
+            }));
+            document.querySelectorAll(".order-product__delete").forEach((el => {}));
         }));
         window["FLS"] = true;
         isWebp();

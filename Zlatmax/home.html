@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220301084955">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220501120500">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,10 +42,11 @@
 				<div class="body-header__container">
 					<a href="home.html" class="body-header__logo"></a>
 					<div data-da=".catalog-header__container, 479.98" class="body-header__search">
-						<form action="#" class="search-header">
-							<button type="submit" class="search-header__button _icon-search"></button>
-							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="search-header__input">
-						</form>
+						<!-- <form action="#" class="search-header">
+					<button type="submit" class="search-header__button _icon-search"></button>
+					<input id="search" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+						placeholder="Поиск" class="search-header__input">
+				</form> -->
 					</div>
 					<div class="body-header__actions actions-header">
 						<!-- <a href="" class="actions-header__location _icon-location"><span>Москва</span></a> -->
@@ -61,32 +62,24 @@
 									</ul>
 								</div>
 							</div>
-							<button type="button" data-popup="#callback" class="phones-header__callback">Заказать
-								звонок</button>
+							<!-- <button type="button" data-popup="#callback" class="phones-header__callback">Заказать
+						звонок</button> -->
 						</div>
-						<a href="" data-da=".top-header__container, 991.98, 2" class="actions-header__favorite  _icon-favorite"></a>
+						<!-- <a href="" data-da=".top-header__container, 991.98, 2"
+					class="actions-header__favorite  _icon-favorite"></a> -->
 						<div data-da=".top-header__container, 991.98, 2" class="actions-header__cart cart-header">
 							<div class="cart-header__icon _icon-cart cart" tabindex="0">
 								<span class="cart__quantity">0</span>
 								<div class="cart-content">
 									<ul class="cart-content__list" data-simplebar>
-										<!-- <li class="cart-content__item">
-									<article class="cart-content__product cart-product">
-										<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="picture" class="cart-product__img"></picture>
-										<div class="cart-product__text">
-											<h3 class="cart-product__title">Нож Лиса</h3>
-											<span class="cart-product__price">2719 ₽</span>
-										</div>
-										<button class="cart-product__delete" aria-label="Удалить товар"></button>
-									</article>
-								</li> -->
+
 									</ul>
 									<div class="cart-content__botoom">
 										<div class="cart-content__fullprice">
 											<span>Итого:</span>
 											<span class="fullprice">2719 ₽</span>
 										</div>
-										<div class="cart-content__btn button">Перейти в корзину</div>
+										<button class="cart-content__btn button" data-graph-path="modal" data-graph-animation="fadeInUp">Перейти в корзину</button>
 									</div>
 								</div>
 							</div>
@@ -102,9 +95,9 @@
 						<ul class="menu-catalog__list">
 							<li class="menu-catalog__item"><button data-parent="1" class="menu-catalog__link">Каталог
 									ножей</button></li>
-							<li class="menu-catalog__item"><button data-parent="2" class="menu-catalog__link">Клинковое
-									оружие</button></li>
-							<li class="menu-catalog__item"><a href="product.html" class="menu-catalog__link">Сувенирные
+							<!-- <li class="menu-catalog__item"><button data-parent="2" class="menu-catalog__link">Клинковое
+							оружие</button></li> -->
+							<li class="menu-catalog__item"><a href="knifeDiana.html" class="menu-catalog__link">Сувенирные
 									изделия</a></li>
 							<li class="menu-catalog__item"><a href="catalog-flashlight.html" class="menu-catalog__link">Фонари
 									ARMYTEK</a></li>
@@ -119,18 +112,18 @@
 										<a href="catalog.html" class="sub-menu-catalog__link-category">Категория ножей</a>
 									</div>
 									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Производство ножей</a>
+										<a href="catalog.html" class="sub-menu-catalog__link-category">Ножи по наименованиям</a>
 									</div>
-									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Ножи по маркам стали</a>
-									</div>
-									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Заточка и полировка
-											ножей</a>
-									</div>
-									<div class="sub-menu-catalog__category">
-										<a href="catalog.html" class="sub-menu-catalog__link-category">Ножевая мастерская</a>
-									</div>
+									<!-- <div class="sub-menu-catalog__category">
+								<a href="catalog.html" class="sub-menu-catalog__link-category">Ножи по маркам стали</a>
+							</div> -->
+									<!-- <div class="sub-menu-catalog__category">
+								<a href="catalog.html" class="sub-menu-catalog__link-category">Заточка и полировка
+									ножей</a>
+							</div>
+							<div class="sub-menu-catalog__category">
+								<a href="catalog.html" class="sub-menu-catalog__link-category">Ножевая мастерская</a>
+							</div> -->
 
 									<ul class="sub-menu-catalog__list">
 										<li class="sub-menu-catalog__item">
@@ -163,114 +156,119 @@
 									</ul>
 									<ul class="sub-menu-catalog__list">
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи АИР</a>
+											<a href="knifeFox.html" class="sub-menu-catalog__link">Нож Лиса</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи ЗИК</a>
+											<a href="knifeBekas.html" class="sub-menu-catalog__link">Нож Бекас</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи ЗЗОСС</a>
+											<a href="knifeSayga.html" class="sub-menu-catalog__link">Нож Сайга</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи РОСоружие</a>
+											<a href="knifeMalysh.html" class="sub-menu-catalog__link">Мачете Малыш</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи Оружейник</a>
+											<a href="knifeMetatelnyBoec.html" class="sub-menu-catalog__link">Нож Метательный
+												Боец 1
+											</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Булат Сергея Баранова</a>
+											<a href="knifeDiana.html" class="sub-menu-catalog__link">Эксклюзивный нож Диана</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Булат Андрея Умерова</a>
+											<a href="axeGift.html" class="sub-menu-catalog__link">Топор украшенный
+											</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи Златко</a>
+											<a href="knifeSigara.html" class="sub-menu-catalog__link">Нож «Сигара COHIBA»
+											</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи Стиль-М</a>
+											<a href="knifeBobrik.html" class="sub-menu-catalog__link">Нож Бобрик</a>
 										</li>
 										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Оружейная компания</a>
+											<a href="knifeFigther.html" class="sub-menu-catalog__link">Нож Боец разборный
+											</a>
 										</li>
 									</ul>
-									<ul class="sub-menu-catalog__list">
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 40х102С2М</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 95х18</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 100х13м</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 110х18м-ШД</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 50х14МФ</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали AUS-8</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали К340</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали M390</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭП-766</a>
-										</li>
-									</ul>
-									<ul class="sub-menu-catalog__list">
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Паста ГОИ</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Алмазная паста</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Бруски и камни для заточки</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Заточные системы</a>
-										</li>
-									</ul>
-									<ul class="sub-menu-catalog__list">
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Ножевые клинки</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Заготовки для ножей</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Литье для ножей</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Материалы для рукоятей</a>
-										</li>
-										<li class="sub-menu-catalog__item">
-											<a href="catalog.html" class="sub-menu-catalog__link">Уход за рукоятиями ножей</a>
-										</li>
-									</ul>
+									<!-- <ul class="sub-menu-catalog__list">
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 40х102С2М</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 95х18</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 100х13м</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 110х18м-ШД</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали 50х14МФ</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали AUS-8</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали К340</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали M390</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножи из стали ЭП-766</a>
+								</li>
+							</ul> -->
+									<!-- <ul class="sub-menu-catalog__list">
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Паста ГОИ</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Алмазная паста</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Бруски и камни для заточки</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Заточные системы</a>
+								</li>
+							</ul> -->
+									<!-- <ul class="sub-menu-catalog__list">
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Ножевые клинки</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Заготовки для ножей</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Литье для ножей</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Материалы для рукоятей</a>
+								</li>
+								<li class="sub-menu-catalog__item">
+									<a href="catalog.html" class="sub-menu-catalog__link">Уход за рукоятиями ножей</a>
+								</li>
+							</ul> -->
 									<div class="sub-menu-catalog__footer">
 										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
 									</div>
 									<div class="sub-menu-catalog__footer">
 										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
 									</div>
-									<div class="sub-menu-catalog__footer">
-										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
-									</div>
-									<div class="sub-menu-catalog__footer">
-										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
-									</div>
-									<div class="sub-menu-catalog__footer">
-										<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
-									</div>
+									<!-- <div class="sub-menu-catalog__footer">
+								<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
+							</div>
+							<div class="sub-menu-catalog__footer">
+								<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
+							</div>
+							<div class="sub-menu-catalog__footer">
+								<a href="catalog.html" class="sub-menu-catalog__all">Смотреть все</a>
+							</div> -->
 								</div>
 								<div hidden data-submenu="2" class="sub-menu-catalog__block">
 									<div class="sub-menu-catalog__category">
@@ -431,12 +429,12 @@
 						<div class="main-block__media media-main-block">
 							<div class="media-main-block__body">
 								<div class="media-main-block__img">
-									<picture><source srcset="img/mainpage/main-block/image.webp" type="image/webp"><img src="img/mainpage/main-block/image.png" alt="knifes"></picture>
+									<img src="img/mainpage/main-block/image.png" alt="knifes">
 								</div>
 								<div class="media-main-block__tips">
-									<div data-tippy-content="Подсказка" class="media-main-block__tip media-main-block__tip_1"><span>+</span></div>
-									<div data-tippy-content="Подсказка" class="media-main-block__tip media-main-block__tip_2"><span>+</span></div>
-									<div data-tippy-content="Подсказка" class="media-main-block__tip media-main-block__tip_3"><span>+</span></div>
+									<div data-tippy-content="Острое лезвие" class="media-main-block__tip media-main-block__tip_1"><span>+</span></div>
+									<div data-tippy-content="Прочная ручка" class="media-main-block__tip media-main-block__tip_2"><span>+</span></div>
+									<div data-tippy-content="Подставка в подарок" class="media-main-block__tip media-main-block__tip_3"><span>+</span></div>
 								</div>
 							</div>
 						</div>
@@ -490,7 +488,7 @@
 							</ul>
 						</div>
 						<div class="item-catalog-cards__img">
-							<picture><source srcset="img/mainpage/catalog-cards/01.webp" type="image/webp"><img src="img/mainpage/catalog-cards/01.jpg" alt="picture"></picture>
+							<img src="img/mainpage/catalog-cards/01.jpg" alt="picture">
 						</div>
 					</div>
 					<div class="catalog-cards__item item-catalog-cards">
@@ -511,7 +509,7 @@
 							</ul>
 						</div>
 						<div class="item-catalog-cards__img">
-							<picture><source srcset="img/mainpage/catalog-cards/02.webp" type="image/webp"><img src="img/mainpage/catalog-cards/02.jpg" alt="picture"></picture>
+							<img src="img/mainpage/catalog-cards/02.jpg" alt="picture">
 						</div>
 					</div>
 					<div class="catalog-cards__item item-catalog-cards">
@@ -532,7 +530,7 @@
 							</ul>
 						</div>
 						<div class="item-catalog-cards__img">
-							<picture><source srcset="img/mainpage/catalog-cards/03.webp" type="image/webp"><img src="img/mainpage/catalog-cards/03.jpg" alt="picture"></picture>
+							<img src="img/mainpage/catalog-cards/03.jpg" alt="picture">
 						</div>
 					</div>
 					<div class="catalog-cards__item item-catalog-cards">
@@ -553,7 +551,7 @@
 							</ul>
 						</div>
 						<div class="item-catalog-cards__img">
-							<picture><source srcset="img/mainpage/catalog-cards/04.webp" type="image/webp"><img src="img/mainpage/catalog-cards/04.jpg" alt="picture"></picture>
+							<img src="img/mainpage/catalog-cards/04.jpg" alt="picture">
 						</div>
 					</div>
 					<div class="catalog-cards__item item-catalog-cards">
@@ -574,7 +572,7 @@
 							</ul>
 						</div>
 						<div class="item-catalog-cards__img">
-							<picture><source srcset="img/mainpage/catalog-cards/05.webp" type="image/webp"><img src="img/mainpage/catalog-cards/05.jpg" alt="picture"></picture>
+							<img src="img/mainpage/catalog-cards/05.jpg" alt="picture">
 						</div>
 					</div>
 					<div class="catalog-cards__item item-catalog-cards">
@@ -595,7 +593,7 @@
 							</ul>
 						</div>
 						<div class="item-catalog-cards__img">
-							<picture><source srcset="img/mainpage/catalog-cards/06.webp" type="image/webp"><img src="img/mainpage/catalog-cards/06.jpg" alt="picture"></picture>
+							<img src="img/mainpage/catalog-cards/06.jpg" alt="picture">
 						</div>
 					</div>
 				</div>
@@ -613,7 +611,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -640,8 +638,8 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -651,14 +649,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="flashlightFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image-02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
+												Лиса</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -680,8 +679,8 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -691,14 +690,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="flashlight-multi.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/products-block/02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="flashlight-multi.html" class="product-card__link-title">Палобный
+												мультифонарь</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -719,9 +719,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">4 990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -731,54 +731,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
-										<span name="img" class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
-										</span>
-									</a>
-									<div class="product-card__body">
-										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
-										</h4>
-										<div class="product-card__info info-product-card">
-											<div class="info-product-card__size">95х18</div>
-											<div class="info-product-card__materials">Орех, Алюминий</div>
-										</div>
-										<div class="product-card__rating rating rating_set">
-											<div class="rating__body">
-												<div class="rating__active"></div>
-												<div class="rating__items">
-													<input type="radio" class="rating__item" value="1" name="rating">
-													<input type="radio" class="rating__item" value="2" name="rating">
-													<input type="radio" class="rating__item" value="3" name="rating">
-													<input type="radio" class="rating__item" value="4" name="rating">
-													<input type="radio" class="rating__item" value="5" name="rating">
-												</div>
-											</div>
-											<div class="rating__value">3.6</div>
-											<div class="rating__info">12 отзывов</div>
-										</div>
-										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
-										</div>
-										<button class="product-card__cart button">
-											<span class="_icon-cart">В корзину</span>
-										</button>
-									</div>
-								</article>
-							</div>
-							<div class="products-slider__slide swiper-slide">
-								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeBekas.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeBekas.html" class="product-card__link-title">Нож
+												Бекас</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -799,9 +760,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">4 300 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -811,14 +772,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeSayga.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeSayga/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeSayga.html" class="product-card__link-title">
+												Нож Сайга</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -839,9 +801,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">7 040 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -851,14 +813,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeMalysh.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeMalysh/01s (1).webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeMalysh.html" class="product-card__link-title">Мачете
+												Малыш</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -879,9 +842,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">8 700 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -891,14 +854,56 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeMetatelnyBoec.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeMetatelnyBoec/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeMetatelnyBoec.html" class="product-card__link-title">Нож
+												Метательный Боец 1</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">40х10C2M</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">2 880 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeDiana.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeDiana/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+												Диана</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -919,9 +924,173 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">58 000 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="axeGift.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/axeGift/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="axeGift.html" class="product-card__link-title">Топор
+												украшенный</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">55 000 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeSigara.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeSigara/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeSigara.html" class="product-card__link-title">Нож «Сигара
+												COHIBA»</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">19 500 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeBobrik.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeBobrik/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeBobrik.html" class="product-card__link-title">Нож
+												Бобрик</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">6 200 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeFigther.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeFighter/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeFigther.html" class="product-card__link-title">Нож Боец
+												разборный</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">10 150 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -954,17 +1123,17 @@
 						<div class="products-new__content">
 							<div class="products-new__slider swiper">
 								<div class="products-new__wrapper swiper-wrapper">
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -985,9 +1154,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -995,17 +1164,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -1026,9 +1195,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -1036,17 +1205,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -1067,9 +1236,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -1077,17 +1246,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -1108,9 +1277,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -1118,17 +1287,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -1149,9 +1318,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -1180,7 +1349,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1220,7 +1389,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1260,7 +1429,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1300,7 +1469,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1340,7 +1509,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1380,7 +1549,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1420,7 +1589,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1460,7 +1629,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1505,8 +1674,8 @@
 			<section class="page__products-slider products-slider">
 				<div class="products-slider__container">
 					<div class="products-slider__header">
-						<h2 class="products-slider__title">Акции</h2>
-						<a href="catalog.html" class="products-slider__more">Все акции</a>
+						<h2 class="products-slider__title">Хиты продаж</h2>
+						<a href="catalog.html" class="products-slider__more">Перейти в каталог</a>
 					</div>
 					<div class="products-slider__slider swiper">
 						<div class="products-slider__wrapper swiper-wrapper">
@@ -1514,7 +1683,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -1541,8 +1710,8 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1552,14 +1721,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="flashlightFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image-02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
+												Лиса</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -1581,8 +1751,8 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1592,14 +1762,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="flashlight-multi.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/products-block/02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="flashlight-multi.html" class="product-card__link-title">Палобный
+												мультифонарь</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -1620,9 +1791,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">4 990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1632,14 +1803,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeBekas.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeBekas.html" class="product-card__link-title">Нож
+												Бекас</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -1660,9 +1832,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">4 300 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1672,14 +1844,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeSayga.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeSayga/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeSayga.html" class="product-card__link-title">
+												Нож Сайга</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -1700,9 +1873,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">7 040 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1712,14 +1885,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeMalysh.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeMalysh/01s (1).webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeMalysh.html" class="product-card__link-title">Мачете
+												Малыш</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -1740,9 +1914,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">8 700 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1752,17 +1926,18 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeMetatelnyBoec.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeMetatelnyBoec/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeMetatelnyBoec.html" class="product-card__link-title">Нож
+												Метательный Боец 1</a>
 										</h4>
 										<div class="product-card__info info-product-card">
-											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__size">40х10C2M</div>
 											<div class="info-product-card__materials">Орех, Алюминий</div>
 										</div>
 										<div class="product-card__rating rating rating_set">
@@ -1780,9 +1955,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">2 880 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1792,14 +1967,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeDiana.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeDiana/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+												Диана</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -1820,9 +1996,173 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">58 000 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="axeGift.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/axeGift/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="axeGift.html" class="product-card__link-title">Топор
+												украшенный</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">55 000 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeSigara.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeSigara/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeSigara.html" class="product-card__link-title">Нож «Сигара
+												COHIBA»</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">19 500 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeBobrik.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeBobrik/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeBobrik.html" class="product-card__link-title">Нож
+												Бобрик</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">6 200 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeFigther.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeFighter/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeFigther.html" class="product-card__link-title">Нож Боец
+												разборный</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">10 150 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -1855,17 +2195,17 @@
 						<div class="products-new__content">
 							<div class="products-new__slider swiper">
 								<div class="products-new__wrapper swiper-wrapper">
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -1886,9 +2226,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -1896,17 +2236,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -1927,9 +2267,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -1937,17 +2277,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -1968,9 +2308,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -1978,17 +2318,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -2009,9 +2349,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -2019,17 +2359,17 @@
 											</div>
 										</article>
 									</div>
-									<div class="products-new__slide swiper-slide">
+									<div class="products-slider__slide swiper-slide">
 										<article class="product-card">
-											<a href="knifeFox.html" class="product-card__image">
+											<a href="knifeDiana.html" class="product-card__image">
 												<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-													<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+													<img src="img/knifeDiana/01s.webp" alt="Picture">
 												</span>
 											</a>
 											<div class="product-card__body">
 												<h4 class="product-card__title">
-													<a href="knifeFox.html" class="product-card__link-title">Нож
-														Лиса</a>
+													<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+														Диана</a>
 												</h4>
 												<div class="product-card__info info-product-card">
 													<div class="info-product-card__size">95х18</div>
@@ -2050,9 +2390,9 @@
 													<div class="rating__info">12 отзывов</div>
 												</div>
 												<div class="product-card__footer">
-													<div class="product-card__price">2 719 р.</div>
-													<a href="" class="product-card__compare _icon-compare"></a>
-													<a href="" class="product-card__favorite _icon-favorite"></a>
+													<div class="product-card__price">58 000 р.</div>
+													<!-- <a href="" class="product-card__compare _icon-compare"></a>
+													<a href="" class="product-card__favorite _icon-favorite"></a> -->
 												</div>
 												<button class="product-card__cart button">
 													<span class="_icon-cart">В корзину</span>
@@ -2081,7 +2421,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2121,7 +2461,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2161,7 +2501,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2201,7 +2541,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2241,7 +2581,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2281,7 +2621,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2321,7 +2661,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2361,7 +2701,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2406,8 +2746,8 @@
 			<section class="page__products-slider products-slider">
 				<div class="products-slider__container">
 					<div class="products-slider__header">
-						<h2 class="products-slider__title">Акции</h2>
-						<a href="catalog.html" class="products-slider__more">Все акции</a>
+						<h2 class="products-slider__title">Хиты продаж</h2>
+						<a href="catalog.html" class="products-slider__more">Перейти в каталог</a>
 					</div>
 					<div class="products-slider__slider swiper">
 						<div class="products-slider__wrapper swiper-wrapper">
@@ -2415,7 +2755,7 @@
 								<article class="product-card">
 									<a href="knifeFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image.png" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2442,8 +2782,8 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2453,14 +2793,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="flashlightFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/image-02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
+												Лиса</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -2482,8 +2823,8 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2493,14 +2834,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="flashlight-multi.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/products-block/02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="flashlight-multi.html" class="product-card__link-title">Палобный
+												мультифонарь</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -2521,9 +2863,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">4 990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2533,14 +2875,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeBekas.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/product-card/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeBekas.html" class="product-card__link-title">Нож
+												Бекас</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -2561,9 +2904,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">4 300 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2573,14 +2916,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeSayga.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeSayga/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeSayga.html" class="product-card__link-title">
+												Нож Сайга</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -2601,9 +2945,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">7 040 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2613,14 +2957,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeMalysh.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeMalysh/01s (1).webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeMalysh.html" class="product-card__link-title">Мачете
+												Малыш</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -2641,9 +2986,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">8 700 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2653,17 +2998,18 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeMetatelnyBoec.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeMetatelnyBoec/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeMetatelnyBoec.html" class="product-card__link-title">Нож
+												Метательный Боец 1</a>
 										</h4>
 										<div class="product-card__info info-product-card">
-											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__size">40х10C2M</div>
 											<div class="info-product-card__materials">Орех, Алюминий</div>
 										</div>
 										<div class="product-card__rating rating rating_set">
@@ -2681,9 +3027,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">2 880 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2693,14 +3039,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="knifeFox.html" class="product-card__image">
+									<a href="knifeDiana.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image.webp" type="image/webp"><img src="img/product-card/image.png" alt="Picture"></picture>
+											<img src="img/knifeDiana/01s.webp" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="knifeFox.html" class="product-card__link-title">Нож Лиса</a>
+											<a href="knifeDiana.html" class="product-card__link-title">Эксклюзивный нож
+												Диана</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -2721,9 +3068,173 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">58 000 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="axeGift.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/axeGift/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="axeGift.html" class="product-card__link-title">Топор
+												украшенный</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">55 000 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeSigara.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeSigara/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeSigara.html" class="product-card__link-title">Нож «Сигара
+												COHIBA»</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">19 500 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeBobrik.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeBobrik/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeBobrik.html" class="product-card__link-title">Нож
+												Бобрик</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">6 200 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="knifeFigther.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/knifeFighter/01s.webp" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="knifeFigther.html" class="product-card__link-title">Нож Боец
+												разборный</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">10 150 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2743,7 +3254,7 @@
 					<div class="articles-module__items">
 						<article class="articles-module__item item-article">
 							<a href="article-knifes.html" class="item-article__img-ibg">
-								<picture><source srcset="img/articles-module/01.webp" type="image/webp"><img src="img/articles-module/01.jpg" alt="picture"></picture>
+								<img src="img/articles-module/01.jpg" alt="picture">
 							</a>
 							<div class="item-article__body">
 								<h4 class="item-article__title">
@@ -2755,7 +3266,7 @@
 						</article>
 						<article class="articles-module__item item-article">
 							<a href="article-flashlight.html" class="item-article__img-ibg">
-								<picture><source srcset="img/articles-module/02.webp" type="image/webp"><img src="img/articles-module/02.jpg" alt="picture"></picture>
+								<img src="img/articles-module/02.jpg" alt="picture">
 							</a>
 							<div class="item-article__body">
 								<h4 class="item-article__title">
@@ -2767,7 +3278,7 @@
 						</article>
 						<article class="articles-module__item item-article">
 							<a href="article-knifes.html" class="item-article__img-ibg">
-								<picture><source srcset="img/articles-module/03.webp" type="image/webp"><img src="img/articles-module/03.jpg" alt="picture"></picture>
+								<img src="img/articles-module/03.jpg" alt="picture">
 							</a>
 							<div class="item-article__body">
 								<h4 class="item-article__title">
@@ -2779,7 +3290,7 @@
 						</article>
 						<article class="articles-module__item item-article">
 							<a href="article-knifes.html" class="item-article__img-ibg">
-								<picture><source srcset="img/articles-module/04.webp" type="image/webp"><img src="img/articles-module/04.jpg" alt="picture"></picture>
+								<img src="img/articles-module/04.jpg" alt="picture">
 							</a>
 							<div class="item-article__body">
 								<h4 class="item-article__title">
@@ -2802,27 +3313,30 @@
 									фонари</a>
 							</h4>
 							<div class="product-block__text">
-								Lorem ipsum dolor sit amet,consectetur adipiscing elit.
+								- фонари, используемые совместно с огнестрельным оружием для подсветки цели, кроме того,
+								могут использоваться для временного ослепления и дезориентации противника.
 							</div>
 							<a href="flashlight-tactical.html" class="product-block__button button">Подробнее</a>
 						</div>
 						<div class="product-block__img">
-							<picture><source srcset="img/products-block/01.webp" type="image/webp"><img src="img/products-block/01.png" alt="picture"></picture>
+							<img src="img/products-block/01.png" alt="picture">
 						</div>
 					</div>
 					<div class="products-block__item product-block">
 						<div class="product-block__body">
 							<h4 class="product-block__title">
-								<a href="flashlight-multi.html" class="product-block__link-title">Палобные
+								<a href="flashlight-multi.html" class="product-block__link-title">Налобные
 									мультифонари</a>
 							</h4>
 							<div class="product-block__text">
-								Lorem ipsum dolor sit amet,consectetur adipiscing elit.
+								- это источник света, прикрепленный к голове для активного отдыха ночью или в темных
+								условиях, катание на лыжах, пеший туризм, альпинизм или катание на
+								горных велосипедах.
 							</div>
 							<a href="flashlight-multi.html" class="product-block__button button">Подробнее</a>
 						</div>
 						<div class="product-block__img">
-							<picture><source srcset="img/products-block/02.webp" type="image/webp"><img src="img/products-block/02.jpg" alt="picture"></picture>
+							<img src="img/products-block/02.jpg" alt="picture">
 						</div>
 					</div>
 				</div>
@@ -2840,7 +3354,7 @@
 								<article class="product-card">
 									<a href="flashlightFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
+											<img src="img/product-card/image-02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2868,8 +3382,90 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="flashlight-multi.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/products-block/02.jpg" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="flashlight-multi.html" class="product-card__link-title">Налобный
+												мультифонарь</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">4990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="flashlight-tactical.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/products-block/01.jpg" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="flashlight-tactical.html" class="product-card__link-title">Тактический
+												фонарь</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">3 990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2881,7 +3477,7 @@
 								<article class="product-card">
 									<a href="flashlightFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
+											<img src="img/product-card/image-02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2909,8 +3505,90 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="flashlight-multi.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/products-block/02.jpg" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="flashlight-multi.html" class="product-card__link-title">Налобный
+												мультифонарь</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">4990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
+										</div>
+										<button class="product-card__cart button">
+											<span class="_icon-cart">В корзину</span>
+										</button>
+									</div>
+								</article>
+							</div>
+							<div class="products-slider__slide swiper-slide">
+								<article class="product-card">
+									<a href="flashlight-tactical.html" class="product-card__image">
+										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
+											<img src="img/products-block/01.jpg" alt="Picture">
+										</span>
+									</a>
+									<div class="product-card__body">
+										<h4 class="product-card__title">
+											<a href="flashlight-tactical.html" class="product-card__link-title">Тактический
+												фонарь</a>
+										</h4>
+										<div class="product-card__info info-product-card">
+											<div class="info-product-card__size">95х18</div>
+											<div class="info-product-card__materials">Орех, Алюминий</div>
+										</div>
+										<div class="product-card__rating rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating">
+													<input type="radio" class="rating__item" value="2" name="rating">
+													<input type="radio" class="rating__item" value="3" name="rating">
+													<input type="radio" class="rating__item" value="4" name="rating">
+													<input type="radio" class="rating__item" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+											<div class="rating__info">12 отзывов</div>
+										</div>
+										<div class="product-card__footer">
+											<div class="product-card__price">3 990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2922,7 +3600,7 @@
 								<article class="product-card">
 									<a href="flashlightFox.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
+											<img src="img/product-card/image-02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
@@ -2950,8 +3628,8 @@
 										</div>
 										<div class="product-card__footer">
 											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -2961,15 +3639,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="flashlightFox.html" class="product-card__image">
+									<a href="flashlight-multi.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
+											<img src="img/products-block/02.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
-												Лиса</a>
+											<a href="flashlight-multi.html" class="product-card__link-title">Налобный
+												мультифонарь</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -2990,9 +3668,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">4990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -3002,15 +3680,15 @@
 							</div>
 							<div class="products-slider__slide swiper-slide">
 								<article class="product-card">
-									<a href="flashlightFox.html" class="product-card__image">
+									<a href="flashlight-tactical.html" class="product-card__image">
 										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
+											<img src="img/products-block/01.jpg" alt="Picture">
 										</span>
 									</a>
 									<div class="product-card__body">
 										<h4 class="product-card__title">
-											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
-												Лиса</a>
+											<a href="flashlight-tactical.html" class="product-card__link-title">Тактический
+												фонарь</a>
 										</h4>
 										<div class="product-card__info info-product-card">
 											<div class="info-product-card__size">95х18</div>
@@ -3031,132 +3709,9 @@
 											<div class="rating__info">12 отзывов</div>
 										</div>
 										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
-										</div>
-										<button class="product-card__cart button">
-											<span class="_icon-cart">В корзину</span>
-										</button>
-									</div>
-								</article>
-							</div>
-							<div class="products-slider__slide swiper-slide">
-								<article class="product-card">
-									<a href="flashlightFox.html" class="product-card__image">
-										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
-										</span>
-									</a>
-									<div class="product-card__body">
-										<h4 class="product-card__title">
-											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
-												Лиса</a>
-										</h4>
-										<div class="product-card__info info-product-card">
-											<div class="info-product-card__size">95х18</div>
-											<div class="info-product-card__materials">Орех, Алюминий</div>
-										</div>
-										<div class="product-card__rating rating rating_set">
-											<div class="rating__body">
-												<div class="rating__active"></div>
-												<div class="rating__items">
-													<input type="radio" class="rating__item" value="1" name="rating">
-													<input type="radio" class="rating__item" value="2" name="rating">
-													<input type="radio" class="rating__item" value="3" name="rating">
-													<input type="radio" class="rating__item" value="4" name="rating">
-													<input type="radio" class="rating__item" value="5" name="rating">
-												</div>
-											</div>
-											<div class="rating__value">3.6</div>
-											<div class="rating__info">12 отзывов</div>
-										</div>
-										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
-										</div>
-										<button class="product-card__cart button">
-											<span class="_icon-cart">В корзину</span>
-										</button>
-									</div>
-								</article>
-							</div>
-							<div class="products-slider__slide swiper-slide">
-								<article class="product-card">
-									<a href="flashlightFox.html" class="product-card__image">
-										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
-										</span>
-									</a>
-									<div class="product-card__body">
-										<h4 class="product-card__title">
-											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
-												Лиса</a>
-										</h4>
-										<div class="product-card__info info-product-card">
-											<div class="info-product-card__size">95х18</div>
-											<div class="info-product-card__materials">Орех, Алюминий</div>
-										</div>
-										<div class="product-card__rating rating rating_set">
-											<div class="rating__body">
-												<div class="rating__active"></div>
-												<div class="rating__items">
-													<input type="radio" class="rating__item" value="1" name="rating">
-													<input type="radio" class="rating__item" value="2" name="rating">
-													<input type="radio" class="rating__item" value="3" name="rating">
-													<input type="radio" class="rating__item" value="4" name="rating">
-													<input type="radio" class="rating__item" value="5" name="rating">
-												</div>
-											</div>
-											<div class="rating__value">3.6</div>
-											<div class="rating__info">12 отзывов</div>
-										</div>
-										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
-										</div>
-										<button class="product-card__cart button">
-											<span class="_icon-cart">В корзину</span>
-										</button>
-									</div>
-								</article>
-							</div>
-							<div class="products-slider__slide swiper-slide">
-								<article class="product-card">
-									<a href="flashlightFox.html" class="product-card__image">
-										<span class="product-card__item-image-ibg product-card__item-image-ibg_contain">
-											<picture><source srcset="img/product-card/image-02.webp" type="image/webp"><img src="img/product-card/image-02.jpg" alt="Picture"></picture>
-										</span>
-									</a>
-									<div class="product-card__body">
-										<h4 class="product-card__title">
-											<a href="flashlightFox.html" class="product-card__link-title">Фонарь
-												Лиса</a>
-										</h4>
-										<div class="product-card__info info-product-card">
-											<div class="info-product-card__size">95х18</div>
-											<div class="info-product-card__materials">Орех, Алюминий</div>
-										</div>
-										<div class="product-card__rating rating rating_set">
-											<div class="rating__body">
-												<div class="rating__active"></div>
-												<div class="rating__items">
-													<input type="radio" class="rating__item" value="1" name="rating">
-													<input type="radio" class="rating__item" value="2" name="rating">
-													<input type="radio" class="rating__item" value="3" name="rating">
-													<input type="radio" class="rating__item" value="4" name="rating">
-													<input type="radio" class="rating__item" value="5" name="rating">
-												</div>
-											</div>
-											<div class="rating__value">3.6</div>
-											<div class="rating__info">12 отзывов</div>
-										</div>
-										<div class="product-card__footer">
-											<div class="product-card__price">2 719 р.</div>
-											<a href="" class="product-card__compare _icon-compare"></a>
-											<a href="" class="product-card__favorite _icon-favorite"></a>
+											<div class="product-card__price">3 990 р.</div>
+											<!-- <a href="" class="product-card__compare _icon-compare"></a>
+											<a href="" class="product-card__favorite _icon-favorite"></a> -->
 										</div>
 										<button class="product-card__cart button">
 											<span class="_icon-cart">В корзину</span>
@@ -3171,6 +3726,43 @@
 			</section>
 
 		</main>
+		<div class="modal">
+			<div class="modal__container order-modal" role="dialog" aria-modal="true" data-graph-target="modal">
+				<div class="modal-content order-modal__content">
+					<div class="order-modal__top">
+						<h2 class="order-modal__title">Оформления заказа</h2>
+						<span class="order-modal__number">Заказ №34</span>
+					</div>
+					<div class="order-modal__info">
+						<div class="order-modal__quantity order-modal__info-item">Товаров в заказе: <span>3 шт</span>
+						</div>
+						<div class="order-modal__summ order-modal__info-item">Общая сумма заказа: <span>10 000 ₽</span>
+						</div>
+						<div class="order-modal__products order-modal__info-item">
+							<button class="order-modal__btn">Состав заказа</button>
+							<ul class="order-modal__list">
+
+							</ul>
+						</div>
+					</div>
+					<form action="#" class="order-modal__form order">
+						<label class="order__label">
+							<span class="order__text">Ваше имя</span>
+							<input name="Имя" type="text" class="order__input">
+						</label>
+						<label class="order__label">
+							<span class="order__text">Номер телефона</span>
+							<input name="Телефон" type="tel" class="order__input" placeholder="+7 (___)___-__-__">
+						</label>
+						<label class="order__label">
+							<span class="order__text">Электронная почта</span>
+							<input name="Email" type="email" class="order__input" placeholder="post@gmail.com">
+						</label>
+						<button class="order__btn button">Оформить заказ</button>
+					</form>
+				</div>
+			</div>
+		</div>
 		<footer class="footer">
 			<section class="footer__text text-footer">
 				<div class="text-footer__container">
@@ -3318,22 +3910,22 @@
 										<ul class="social-footer">
 											<li class="social-footer__item">
 												<a href="https://ru-ru.facebook.com/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/facebook.webp" type="image/webp"><img src="img/icons/social/facebook.png" alt="picture"></picture>
+													<img src="img/icons/social/facebook.png" alt="picture">
 												</a>
 											</li>
 											<li class="social-footer__item">
 												<a href="https://www.viber.com/ru/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/viber.webp" type="image/webp"><img src="img/icons/social/viber.png" alt="picture"></picture>
+													<img src="img/icons/social/viber.png" alt="picture">
 												</a>
 											</li>
 											<li class="social-footer__item">
 												<a href="https://telegram.org/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/telegram.webp" type="image/webp"><img src="img/icons/social/telegram.png" alt="picture"></picture>
+													<img src="img/icons/social/telegram.png" alt="picture">
 												</a>
 											</li>
 											<li class="social-footer__item">
 												<a href="https://web.whatsapp.com/" class="social-footer__link">
-													<picture><source srcset="img/icons/social/whatsapp.webp" type="image/webp"><img src="img/icons/social/whatsapp.png" alt="picture"></picture>
+													<img src="img/icons/social/whatsapp.png" alt="picture">
 												</a>
 											</li>
 										</ul>
@@ -3424,15 +4016,16 @@
 
 	<div id="form-message" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__content popup__content-email">
+				<!-- <button data-close type="button" class="popup__close">Закрыть</button> -->
 				<div class="popup__text">
 					Спасибо!
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220301084955"></script>
+	<script src="js/app.min.js?_v=20220501120500"></script>
+
 </body>
 
 
